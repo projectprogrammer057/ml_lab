@@ -29,7 +29,7 @@ def predict():
     output = breast_cancer_detector_model.predict(df)
         
     if output == 0:
-        res_val = "malignant tumor,The Patient may be affected in Breast Cancer.Please Consult to the oncologist as as possible"
+        res_val = "malignant tumor,The Patient may be affected in Breast Cancer.Please Consult to the oncologist as soon as possible"
     else:
         res_val = "benign tumor,The Patient have no Breast Cancer.Please Consult to the Doctor for taking treatment of benign tumor"
         
