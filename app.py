@@ -29,12 +29,12 @@ def predict():
     output = breast_cancer_detector_model.predict(df)
         
     if output == 0:
-        res_val = "** breast cancer **"
+        res_val = "malignant tumor,The Patient may be affected in Breast Cancer.Please Consult to the oncologist as as possible"
     else:
-        res_val = "no breast cancer"
+        res_val = "benign tumor,The Patient have no Breast Cancer.Please Consult to the Doctor for taking treatment of benign tumor"
         
 
-    return render_template('index.html', prediction_text='Patient has {}'.format(res_val))
+    return render_template('index.html', prediction_text='The Tumor is {}'.format(res_val))
 
 if __name__ == "__main__":
     app.run()
